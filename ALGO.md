@@ -41,3 +41,16 @@
   This algorithm runs (generally) in the same time an algorithm with the golden ratio runs, however it runs much *much* faster than the brute force algorithm that uses the recursive definition of a fibonacci number.
 
   THEREFORE: This will run in `O(n/3)`, or `O(n)`, but is what i believe is the fastest possible algorithm without using Binet's formula at 12 iterations (per 33 even fibonacci numbers < 4000000). It doesn't iterate over any odd Fibonacci numbers.
+
+# 003
+## Largest prime factor
+[Question](https://projecteuler.net/problem=3) | [Code](https://github.com/jaruserickson/project-euler-solutions/blob/master/python/003.py)
+
+  With this question, I found it pretty hard to come up with a solution that wasn't even *kind of* brute force-y, so I ended up keeping the brute force, and just improve it.
+
+  I found that divide-and-conquer would be the best way of attacking the problem. Every time I found a number that would divide into the input, run an algorithm that runs in `O(n)` that checks if it's prime. If so, set the largest number to this number, and divide the input by said number (without permanently mutating the input - thanks python!).
+
+  The time complexity is kind of odd for this one, since the `O(n)` `is_prime` algorithm only runs 4 or 5 times for the input specified. I calculated the time complexity by nature of the algorithm.
+
+  This ends up running in `O(lgn)`, due to its divide-and-conquer nature. The input decreases in size every so often. 
+  
