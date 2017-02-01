@@ -11,7 +11,7 @@ def is_prime(n):
 		return True
 
 def largest_pf(n):
-	#runs in O(lgn) time (divide and conquer)
+	#runs in O(nlgn) time (divide and conquer optimization)
 	largest, x = 1, 2
 	while(x <= n): 
 	    #this runs in this order so is_prime(x) will only run when n % x == 0

@@ -52,4 +52,4 @@
 
   The time complexity is kind of odd for this one, since the `O(n)` `is_prime` algorithm only runs 4 or 5 times for the input specified. I took the time complexity by nature of the algorithm.
 
-  This ends up running in `O(lgn)`, due to its divide-and-conquer nature. The input decreases in size every so often. 
+  This ends up running in `O(nlgn)`, due to its divide-and-conquer nature. The input decreases in size every so often, and optimizes upon an `O(n)` algorithm. 
