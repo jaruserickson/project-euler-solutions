@@ -50,7 +50,6 @@
 
   I found that divide-and-conquer would be the best way of attacking the problem. Every time I found a number that would divide into the input, run an algorithm that runs in `O(n)` that checks if it's prime. If so, set the largest number to this number, and divide the input by said number (without permanently mutating the input - thanks python!).
 
-  The time complexity is kind of odd for this one, since the `O(n)` `is_prime` algorithm only runs 4 or 5 times for the input specified. I calculated the time complexity by nature of the algorithm.
+  The time complexity is kind of odd for this one, since the `O(n)` `is_prime` algorithm only runs 4 or 5 times for the input specified. I took the time complexity by nature of the algorithm.
 
   This ends up running in `O(lgn)`, due to its divide-and-conquer nature. The input decreases in size every so often. 
-  
