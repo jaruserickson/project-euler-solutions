@@ -48,8 +48,10 @@
 
   With this question, I found it pretty hard to come up with a solution that wasn't even *kind of* brute force-y, so I ended up keeping the brute force, and just improve it.
 
-  I found that divide-and-conquer would be the best way of attacking the problem. Every time I found a number that would divide into the input, run an algorithm that runs in `O(n)` that checks if it's prime. If so, set the largest number to this number, and divide the input by said number (without permanently mutating the input - thanks python!).
+  I originally used a basic algorithm, coupled with the Fundamental Theorem of Arithmetic, to achieve the answer, but found that it ran in `O(n)` time. After some reasearch, I found that the best way of attacking this problem would be via a [Prime Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)-esque algorithm.
 
-  The time complexity is kind of odd for this one, since the `O(n)` `is_prime` algorithm only runs 4 or 5 times for the input specified. I took the time complexity by nature of the algorithm.
+  We can search through `x ** 2`, as x increases by 1 starting at the first prime, 2, whenever we find a divisor, we divide into the number, decreasing our interval. The algorithm will terminate once `x ** 2 > n`. If a prime number is found, the number is composite, and we have our largest prime, otherwise our largest prime is the input. Please see [Prime Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) for further explanation.
 
-  This ends up running in `O(nlgn)`, due to its divide-and-conquer nature. The input decreases in size every so often, and optimizes upon an `O(n)` algorithm. 
+  NOTE: We don't have to check whether a number is prime when dividing, since (by the Fundamental Theorem of Arithmetic), any composite number is a *composite* of prime numbers.
+
+  Our worst-case time complexity here is `O(sqrt(n))`. This will occur with any prime number, i.e. 961,748,941 will run in roughly 31,011 steps. 
