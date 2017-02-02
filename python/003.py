@@ -1,7 +1,7 @@
 def largest_pf(n):
 	#runs in O(sqrt(n)) time
 	x, largest = 2, 1
-	while x ** 2 <= n: 
+	while x ** 2 < n: 
 		# runs as many times as can be divided by the prime.
 		while n % x == 0:
 			if x > largest:
