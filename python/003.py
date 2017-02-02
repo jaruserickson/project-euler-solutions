@@ -12,15 +12,13 @@ def is_prime(n):
 
 def largest_pf(n):
 	#runs in O(nlgn) time (divide and conquer optimization)
-	largest, x = 1, 2
-	while(x <= n): 
+	x = 2
+	while x < n: 
 	    #this runs in this order so is_prime(x) will only run when n % x == 0
 		if n % x == 0 and is_prime(x):
-			if x > largest:
-				largest = x
 			n //= x 
 		x += 1
-	return largest
+	return n
 
 
 if __name__ == "__main__":
