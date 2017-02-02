@@ -1,21 +1,9 @@
-def is_prime(n):
-	#basic is_prime
-	#runs in O(n)
-	count = 0
-	for x in range(2, n + 1):
-		if n % x == 0:
-			count += 1
-	if count > 1:
-		return False
-	else:
-		return True
-
 def largest_pf(n):
 	#runs in O(nlgn) time (divide and conquer optimization)
 	x, largest = 2, 1
 	while x ** 2 < n: 
 	    #this runs in this order so is_prime(x) will only run when n % x == 0
-		while n % x == 0 and is_prime(x):
+		while n % x == 0:
 			if x > largest:
 				largest = x
 			n //= x 
