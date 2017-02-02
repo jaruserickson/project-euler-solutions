@@ -50,6 +50,6 @@
 
   We can search through `x ** 2`, as x increases by 1 starting at the first prime, 2. Whenever we find a divisor, we divide into the number, decreasing our loop interval. The algorithm will terminate once `x ** 2 > n`. If a prime number is found, the number is composite, and we have our largest prime, otherwise our largest prime is the input. Please see [Prime Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) for further explanation.
 
-  NOTE: We don't have to check whether a number is prime when dividing, since (by the Fundamental Theorem of Arithmetic), any composite number is a *composite* of prime numbers.
+  NOTE: We don't have to check whether a number is prime when dividing for this algorithm, since (by the Fundamental Theorem of Arithmetic), any composite number is a *composite* of prime numbers, and we are only searching for the largest prime.
 
   Our worst-case time complexity here is `O(sqrt(n))`. This will occur with any prime number, i.e. 961,748,941 will run in roughly 31,012 steps. 
