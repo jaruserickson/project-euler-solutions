@@ -46,12 +46,10 @@
 ## Largest prime factor
 [Question](https://projecteuler.net/problem=3) | [Code](https://github.com/jaruserickson/project-euler-solutions/blob/master/python/003.py)
 
-  With this question, I found it pretty hard to come up with a solution that wasn't even *kind of* brute force-y, so I ended up keeping the brute force, and just improve it.
+  I originally used a fairly basic algorithm, coupled with some use of the Fundamental Theorem of Arithmetic to achieve the answer, but found that it ran in worst-case `O(n)` time. After some reasearch, I found that the best way of attacking this problem would be via a [Prime Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)-esque algorithm.
 
-  I originally used a basic algorithm, coupled with the Fundamental Theorem of Arithmetic, to achieve the answer, but found that it ran in `O(n)` time. After some reasearch, I found that the best way of attacking this problem would be via a [Prime Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)-esque algorithm.
-
-  We can search through `x ** 2`, as x increases by 1 starting at the first prime, 2, whenever we find a divisor, we divide into the number, decreasing our interval. The algorithm will terminate once `x ** 2 > n`. If a prime number is found, the number is composite, and we have our largest prime, otherwise our largest prime is the input. Please see [Prime Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) for further explanation.
+  We can search through `x ** 2`, as x increases by 1 starting at the first prime, 2. Whenever we find a divisor, we divide into the number, decreasing our loop interval. The algorithm will terminate once `x ** 2 > n`. If a prime number is found, the number is composite, and we have our largest prime, otherwise our largest prime is the input. Please see [Prime Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) for further explanation.
 
   NOTE: We don't have to check whether a number is prime when dividing, since (by the Fundamental Theorem of Arithmetic), any composite number is a *composite* of prime numbers.
 
-  Our worst-case time complexity here is `O(sqrt(n))`. This will occur with any prime number, i.e. 961,748,941 will run in roughly 31,011 steps. 
+  Our worst-case time complexity here is `O(sqrt(n))`. This will occur with any prime number, i.e. 961,748,941 will run in roughly 31,012 steps. 
