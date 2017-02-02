@@ -18,5 +18,3 @@ My goal for this repo is to help others understand why computer science is so im
 ## Rules
 - Achieve the best runtime complexity I can!
 - Don't use Google/Stack Overflow!!
-
-![projecteuler](https://projecteuler.net/profile/jaruserickson.png "rank")
