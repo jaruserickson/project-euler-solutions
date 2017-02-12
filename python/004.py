@@ -1,4 +1,4 @@
-def largest_palindrome():
+def largest_palindrome_bruteforce():
     lst = []
     for number in range(100,1000):
         for num in range(100,1000):
@@ -17,4 +17,4 @@ def is_palindrome(n):
     return False
 
 
-print(largest_palindrome())
+print(largest_palindrome_bruteforce())
