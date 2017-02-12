@@ -24,8 +24,8 @@ def is_palindrome(n):
 #It checks if product is a palindrome, and if it is, it sees if there are two 3 digits numbers that give that product
 def palindrome_efficient():
     for product in range(998001, 0, -1):
-        if is_palindrome(str(product)):
-            for mult in range(999, 0 , -1):
+        if str(product) == str(product)[::-1]: #checking if string is palindrome, no need to use helper function
+            for mult in range(100, 1000):
                 if product / mult == int(product / mult) and len(str(int(product / mult))) == 3:
                     return product
 
