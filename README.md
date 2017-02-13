@@ -1,5 +1,7 @@
 # Project Euler
-These are my solutions to [Project Euler](https://projecteuler.net).
+These are my open source solutions to [Project Euler](https://projecteuler.net).
+
+Feel free to contribute if you find a better solution!
 
 Find the logic to my solutions at [ALGO.md](https://github.com/jaruserickson/project-euler-solutions/blob/master/ALGO.md)!
 

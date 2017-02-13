@@ -1,5 +1,7 @@
 # Project Euler // Python3
-These are my solutions to [Project Euler](https://projecteuler.net) in Python 3.
+These are my open source solutions to [Project Euler](https://projecteuler.net) in Python 3.
+
+Feel free to contribute if you find a better solution!
 
 Find the logic to my solutions at [ALGO.md](https://github.com/jaruserickson/project-euler-solutions/blob/master/ALGO.md)!
 
