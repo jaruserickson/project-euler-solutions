@@ -1,7 +1,7 @@
 # Project Euler
 These are my open source solutions to [Project Euler](https://projecteuler.net).
 
-Feel free to contribute if you find a better solution!
+Feel free to contribute if you find a solution (or an improvement)!
 
 Find the logic to my solutions at [ALGO.md](https://github.com/jaruserickson/project-euler-solutions/blob/master/ALGO.md)!
 
@@ -14,7 +14,7 @@ My goal for this repo is to help others understand why computer science is so im
 - [x] [002: Even Fibonacci numbers](https://projecteuler.net/problem=2) | [Code](https://github.com/jaruserickson/project-euler-solutions/blob/master/python/002.py) | [Explained!](https://github.com/jaruserickson/project-euler-solutions/blob/master/ALGO.md#002) | `O(n/3)` | `Jacob Erickson`
 - [x] [003: Largest prime factor](https://projecteuler.net/problem=3) | [Code](https://github.com/jaruserickson/project-euler-solutions/blob/master/python/003.py) | [Explained!](https://github.com/jaruserickson/project-euler-solutions/blob/master/ALGO.md#003) | `O(sqrt(n))` | `Jacob Erickson`
 - [x] [004: Largest palindrome product](https://projecteuler.net/problem=4) | [Code](https://github.com/jaruserickson/project-euler-solutions/blob/master/python/004.py) | [Explained!](https://github.com/jaruserickson/project-euler-solutions/blob/master/ALGO.md#004) | `O(n^2)` | `Jason Piao`
-- [ ] [005: Smallest multiple](https://projecteuler.net/problem=4)
+- [ ] [005: Smallest multiple](https://projecteuler.net/problem=5)
 
 ...
 
